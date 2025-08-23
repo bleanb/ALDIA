@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Game - Página con Efectos de Fuego</title>
+    <link rel="stylesheet" href="../css/stylebienvenido.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <!-- Back / Volver al inicio -->
+    <a class="back-arrow" href="../index.html" aria-label="Volver al inicio">
+    <!-- Flecha (SVG inline) -->
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" aria-hidden="true">
+            <path d="M15 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </a>
+
+    <!-- Fondo de fuego -->
+    <div class="fire-background"></div>
+    
+    <!-- Contenedor de partículas -->
+    <div class="particles-container" id="particles"></div>
+    
+    <!-- Llamas más sutiles en la parte inferior -->
+    <div class="flame" style="left: 15%; animation-delay: 0s;"></div>
+    <div class="flame" style="left: 30%; animation-delay: 0.5s;"></div>
+    <div class="flame" style="left: 50%; animation-delay: 1s;"></div>
+    <div class="flame" style="left: 70%; animation-delay: 0.3s;"></div>
+    <div class="flame" style="left: 85%; animation-delay: 0.8s;"></div>
+
+    <!-- Contenedor principal -->
+    <div class="main-container">
+      <a class="btn-idioma" ><p>EN</p><i class="ri-global-line" aria-hidden="true"></i></a>
+        <!-- Sección 1 -->
+        <div class="content-section active" id="section1">
+            <h1 class="animated-title" id="animatedTitle">YA CASI...</h1>
+            <p class="subtitle-yacasi">Te uniste porque no queres quedarte afuera, la IA ya llegó y no podes quedarte atrás. Vive el futuro en el presente.</p>
+        </div>
+
+<!-- Sección 2: SPAM -->
+<div class="content-section" id="section2">
+  <div class="spam-grid">
+    <!-- Video -->
+    <figure class="spam-video-card">
+      <video class="spam-video" autoplay muted playsinline loop preload="auto" poster="../asstes/img/drakonet.png">
+        <!-- Recomendado: convertí AdobeStock_552603497.mov a webm/mp4 -->
+        <source src="../asstes/video/spam.mov" type="video/webm">
+        <source src="../asstes/video/spam.mov"  type="video/mp4">
+        Tu navegador no soporta el video.
+      </video>
+      <figcaption class="spam-caption">Evitanos el SPAM ✉️</figcaption>
+    </figure>
+
+    <!-- Copy y rotador -->
+    <div class="spam-copy">
+      <h2 class="main-title-spam">SPAM</h2>
+
+      <ul class="spam-rotator" aria-live="polite">
+        <li class="msg show">Buscanos en “Spam” o “Promociones”.</li>
+        <li class="msg">Marcá “No es spam”.</li>
+        <li class="msg">Arrastrá a “Principal”.</li>
+        <li class="msg">Agregá <b>newsletter@aldia.ai</b> a tus contactos.</li>
+      </ul>
+
+    
+<div class="store-badges">
+  <a class="store-badge badge-gmail"
+     href="https://mail.google.com/mail/u/0/#search/from%3Anewsletter%40aldia.ai"
+     target="_blank" rel="noopener">
+    <span class="badge-icon1"><img src="../asstes/img/gmail.png" alt="Gmail"></span>
+    <span class="badge-text"><span class="badge-top">Abrir en</span><span class="badge-brand">Gmail</span></span>
+  </a>
+
+  <a class="store-badge badge-outlook"
+     href="https://outlook.live.com/mail/0/search?q=from%3Anewsletter%40aldia.ai"
+     target="_blank" rel="noopener">
+    <span class="badge-icon2"><img src="../asstes/img/outlook.png" alt="Outlook"></span>
+    <span class="badge-text"><span class="badge-top">Abrir en</span><span class="badge-brand">Outlook</span></span>
+  </a>
+</div>
+
+    </div>
+  </div>
+</div>
+
+        <!-- Sección 3 -->
+    <div class="content-section" id="section3">
+        <div class="proximamente-container">
+            <div class="proximamente-text text-4">PRÓXIMAMENTE</div>
+            <div class="proximamente-text text-3">PRÓXIMAMENTE</div>
+            <div class="proximamente-text text-2">PRÓXIMAMENTE</div>
+            <div class="proximamente-text text-1">PRÓXIMAMENTE</div>
+        </div>
+        
+        <p class="subtitle-proximamente">Una comunidad donde podes compartir tu conocimiento, y aprender, donde todos nos sumamos y tiramos para adelante.</p>
+<!-- Video container -->
+        <div class="video-container">
+            <div class="video-placeholder">
+                <video src="../asstes/video/footer-video.mp4"></video>
+            </div>
+        </div>
+    </div>
+
+        <!-- Sección 4 -->
+        <div class="content-section" id="section4">
+            <h1 class="main-title">GRACIAS</h1>
+            <p class="subtitle">Gracias por compartir la misma pasion, la misma vision. Gracias por elegir nuestro Newsletter.</p>
+            <img class="logo-gracias" src="../asstes/img/logo.svg" alt="logo">
+        </div>
+
+        <!-- Indicador de scroll -->
+        <div class="scroll-indicator">
+            <p>( navega con las flechas o el scroll )</p>
+            <span class="hint-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor">
+                    <path d="M15 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </span>
+        </div>
+    </div>
+    <!-- scripts -->
+<script src="../js/idioma.js" ></script>
+<script src="../js/manejojson.js" ></script>
+<script src="../js/funcionamientoBienvenida.js"></script>
+</body>
+</html>

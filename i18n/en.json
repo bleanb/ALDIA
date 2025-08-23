@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "back_aria": "Back to home"
+  },
+  "section1": {
+    "title": "ALMOST THERE...",
+    "subtitle": "You joined because you don’t want to miss out—AI is already here and you can’t fall behind. Live the future now."
+  },
+  "section2": {
+    "title": "SPAM",
+    "figcaption": "Avoid our emails going to SPAM ✉️",
+    "steps": [
+      "Find us in “Spam” or “Promotions”.",
+      "Mark as “Not spam”.",
+      "Drag to “Primary”.",
+      "Add newsletter@aldia.ai to your contacts."
+    ],
+    "badges": {
+      "open_in": "Open in",
+      "gmail": "Gmail",
+      "outlook": "Outlook"
+    },
+    "video_fallback": "Your browser does not support the video."
+  },
+  "section3": {
+    "soon": "COMING SOON",
+    "subtitle": "A community to share what you know and learn together, where everyone adds value and moves forward."
+  },
+  "section4": {
+    "title": "THANK YOU",
+    "subtitle": "Thanks for sharing the same passion and vision. Thanks for choosing our Newsletter."
+  },
+  "ui": {
+    "scroll_hint": "( navigate with arrows or scroll )"
+  }
+}

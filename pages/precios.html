@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aldia.ai - El Newsletter</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="../asstes/img/icono.png">
+</head>
+<body>
+    <!-- Fondo animado -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <div class="gradient-orb orb-4"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="../index.html" class="contenedor-logo"><img class="logo-header" src="../asstes/img/logo.svg" alt="logo"></a>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="../pages/info.html" class="nav-link">info</a>
+                <a href="../pages/precios.html class="nav-link">Precios</a>
+                <a href="../pages/contacto.html" class="nav-link">Contacto</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-primary">Suscribirse</a>
+                <a href="#" class="btn-secondary">Demo Free</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="main">
+      
+<section id="planes" class="pricing">
+  <div class="container">
+    <h2 class="section-title">Elegí tu plan</h2>
+
+    <!-- Switch mensual/anual -->
+    <div class="billing-switch" aria-label="Toggle de facturación">
+      <span>Mensual</span>
+      <button id="billingToggle" class="switch" aria-pressed="false" type="button">
+        <span class="knob"></span>
+      </button>
+      <span>Anual <small class="save">-15%</small></span>
+    </div>
+
+    <div id="plans" class="plans">
+      <!-- Free -->
+      <article class="plan-card popular">
+        <div class="plan-badge">POPULAR</div>
+        <header class="plan-header">
+          <h3>Demo Free</h3>
+          <div class="plan-price">
+            <span class="currency">$</span><span class="amount">0</span>
+            <span class="period">/mes</span>
+          </div>
+          <p class="plan-desc">Links esenciales y 1 insight por edición.</p>
+        </header>
+        <ul class="plan-features">
+            <li>2 ediciones por semana</li>
+            <li>Selección de noticias clave</li>
+            <li>Un accionable por edición</li>
+            <li class="unavailable">Acceso a histórico</li>
+            <li class="unavailable">Prioridad en soporte</li>
+        </ul>
+        <button class="btn-secondary plan-cta">Demo Free</button>
+      </article>
+
+      <!-- Pro (popular) -->
+      <article class="plan-card ">
+        <header class="plan-header">
+          <h3>Pro</h3>
+          <div class="plan-price">
+            <span class="currency">$</span>
+            <span class="amount" data-monthly="5" data-yearly="4">5</span>
+            <span class="period">/mes</span>
+          </div>
+          <p class="plan-desc">Todo lo de Free + resúmenes accionables, workflows y prompts curados.</p>
+        </header>
+        <ul class="plan-features">
+          <li>3 ediciones por semana</li>
+          <li>Plantillas & flujos (n8n/Zapier)</li>
+          <li>Prioridad en soporte</li>
+          <li>Acceso a histórico</li>
+        </ul>
+        <button class="btn-primary plan-cta disabled-btn">Empezar</button>
+      </article>
+
+      <!-- Teams -->
+      <article class="plan-card">
+        <header class="plan-header">
+          <h3>Webinar</h3>
+          <div class="plan-price">
+            <span class="currency">$</span>
+            <span class="amount" data-monthly="12" data-yearly="10">12</span>
+            <span class="period">Curso X Mes</span>
+          </div>
+          <p class="plan-desc">Comunidad con recursos, ebooks internos, implementa la IA bajo nuestra guia.</p>
+        </header>
+        <ul class="plan-features">
+          <li>Todo lo Pro</li>
+          <li>Ebooks personalizados</li>
+          <li>Soporte dedicado</li>
+          <li>Asesoría de implementación de IA</li>
+        </ul>
+        <button class="btn-primary plan-cta disabled-btn">Empezar</button>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- Modal Demo Free -->
+<div id="demo-modal" class="modal-root" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="demo-title">
+    <button class="modal-close" aria-label="Cerrar" data-close>✕</button>
+
+    <header class="modal-head">
+      <h3 id="demo-title">Queres probar la Demo?</h3>
+      <p>Dejanos tu email y te mandamos una edición de prueba.</p>
+    </header>
+
+    <!-- Reusa las clases del footer para mantener el estilo -->
+    <form id="modal-subscribe-form" class="subscribe-form" action="#" method="post" novalidate>
+      <label for="modal-email" class="sr-only">Tu email</label>
+      <div class="subscribe-row">
+        <input
+          id="modal-email"
+          name="email"
+          type="email"
+          class="subscribe-input"
+          placeholder="tunombre@correo.com"
+          required
+          autocomplete="email"
+        />
+        <button type="submit" class="btn-subscribe">
+          Suscribirme
+          <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+      <small class="subscribe-hint">Sin spam. Podés darte de baja cuando quieras.</small>
+      <div class="subscribe-feedback" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+    </main>
+
+    <!-- Footer -->
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <!-- Columna marca -->
+        <div class="footer-brand">
+          <a href="../index.html"><img class="logo-footer" src="../asstes/img/logo.svg" alt="logo"></a>
+          <p>El Newsletter más apasionado y completo de IA. Hecho en 🇦🇷 para el mundo. IA con criterio, no con humo.</p>
+        </div>
+
+      <!-- Columna links -->
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Producto</h4>
+          <a href="../index.html#features">Características</a>
+          <a href="../pages/precios.html">Precios</a>
+          <a href="../pages/info.html">Info</a>
+        </div>
+        <div class="footer-column">
+          <h4>Soporte</h4>
+          <a href="#">Centro de Ayuda</a>
+          <a href="#">Contacto</a>
+          <a href="#">Estado</a>
+        </div>
+      </div>
+
+      <!-- Columna suscripción -->
+      <div class="footer-subscribe">
+        <h4>Suscribite</h4>
+        <p class="subscribe-copy">Lo esencial de IA en <strong>5′</strong>, 3 veces por semana.</p>
+
+        <form id="footer-subscribe-form" class="subscribe-form" action="#" method="post" novalidate>
+          <label for="footer-email" class="sr-only">Tu email</label>
+          <div class="subscribe-row">
+            <input
+              id="footer-email"
+              name="email"
+              type="email"
+              class="subscribe-input"
+              placeholder="tunombre@correo.com"
+              required
+              autocomplete="email"
+            />
+            <button type="submit" class="btn-subscribe">
+              Suscribirme
+              <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+          <small class="subscribe-hint">Sin spam. Podés darte de baja cuando quieras.</small>
+          <div class="subscribe-feedback" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+      <div class="footer-bottom">
+  <p>© <span id="current-year"></span> · Todos los derechos reservados — Leandro Bellone.</p>
+</div>
+</footer>
+
+
+    <script src="../js/script.js"></script>
+    <script src="../js/modal.js"></script>
+    <script src="../js/footer-form.js"></script>
+
+</body>
+</html>

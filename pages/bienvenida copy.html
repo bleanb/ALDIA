@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Game - Página con Efectos de Fuego</title>
+    <link rel="stylesheet" href="../css/stylebienvenido.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <!-- Back / Volver al inicio -->
+    <a class="back-arrow" href="../index.html" aria-label="Volver al inicio">
+    <!-- Flecha (SVG inline) -->
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" aria-hidden="true">
+            <path d="M15 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </a>
+
+    <!-- Fondo de fuego -->
+    <div class="fire-background"></div>
+    
+    <!-- Contenedor de partículas -->
+    <div class="particles-container" id="particles"></div>
+    
+    <!-- Llamas más sutiles en la parte inferior -->
+    <div class="flame" style="left: 15%; animation-delay: 0s;"></div>
+    <div class="flame" style="left: 30%; animation-delay: 0.5s;"></div>
+    <div class="flame" style="left: 50%; animation-delay: 1s;"></div>
+    <div class="flame" style="left: 70%; animation-delay: 0.3s;"></div>
+    <div class="flame" style="left: 85%; animation-delay: 0.8s;"></div>
+
+    <!-- Contenedor principal -->
+    <div class="main-container">
+        <!-- Sección 1 -->
+        <div class="content-section active" id="section1">
+            <h1 class="animated-title" id="animatedTitle">YA CASI...</h1>
+            <p class="subtitle-yacasi">Te uniste porque no queres quedarte afuera, la IA ya llegó y no podes quedarte atrás. Vive el futuro en el presente.</p>
+        </div>
+
+<!-- Sección 2: SPAM -->
+<div class="content-section" id="section2">
+  <div class="spam-grid">
+    <!-- Video -->
+    <figure class="spam-video-card">
+      <video class="spam-video" autoplay muted playsinline loop preload="auto" poster="../asstes/img/drakonet.png">
+        <!-- Recomendado: convertí AdobeStock_552603497.mov a webm/mp4 -->
+        <source src="../asstes/video/spam.mov" type="video/webm">
+        <source src="../asstes/video/spam.mov"  type="video/mp4">
+        Tu navegador no soporta el video.
+      </video>
+      <figcaption class="spam-caption">Evitanos el SPAM ✉️</figcaption>
+    </figure>
+
+    <!-- Copy y rotador -->
+    <div class="spam-copy">
+      <h2 class="main-title">SPAM</h2>
+
+      <ul class="spam-rotator" aria-live="polite">
+        <li class="msg show">Buscanos en “Spam” o “Promociones”.</li>
+        <li class="msg">Marcá “No es spam”.</li>
+        <li class="msg">Arrastrá a “Principal”.</li>
+        <li class="msg">Agregá <b>newsletter@aldia.ai</b> a tus contactos.</li>
+      </ul>
+
+    
+<div class="store-badges">
+  <a class="store-badge badge-gmail"
+     href="https://mail.google.com/mail/u/0/#search/from%3Anewsletter%40aldia.ai"
+     target="_blank" rel="noopener">
+    <span class="badge-icon1"><img src="../asstes/img/gmail.png" alt="Gmail"></span>
+    <span class="badge-text"><span class="badge-top">Abrir en</span><span class="badge-brand">Gmail</span></span>
+  </a>
+
+  <a class="store-badge badge-outlook"
+     href="https://outlook.live.com/mail/0/search?q=from%3Anewsletter%40aldia.ai"
+     target="_blank" rel="noopener">
+    <span class="badge-icon2"><img src="../asstes/img/outlook.png" alt="Outlook"></span>
+    <span class="badge-text"><span class="badge-top">Abrir en</span><span class="badge-brand">Outlook</span></span>
+  </a>
+</div>
+
+    </div>
+  </div>
+</div>
+
+        <!-- Sección 3 -->
+    <div class="content-section" id="section3">
+        <div class="proximamente-container">
+            <div class="proximamente-text text-4">PRÓXIMAMENTE</div>
+            <div class="proximamente-text text-3">PRÓXIMAMENTE</div>
+            <div class="proximamente-text text-2">PRÓXIMAMENTE</div>
+            <div class="proximamente-text text-1">PRÓXIMAMENTE</div>
+        </div>
+        
+        <p class="subtitle-proximamente">Una comunidad donde podes compartir tu conocimiento, y aprender, donde todos nos sumamos y tiramos para adelante.</p>
+<!-- Video container -->
+        <div class="video-container">
+            <div class="video-placeholder">
+                <video src="../asstes/video/footer-video.mp4"></video>
+            </div>
+        </div>
+    </div>
+
+        <!-- Sección 4 -->
+        <div class="content-section" id="section4">
+            <h1 class="main-title">GRACIAS</h1>
+            <p class="subtitle">Gracias por compartir la misma pasion, la misma vision. Gracias por elegir nuestro Newsletter.</p>
+            <img class="logo-gracias" src="../asstes/img/logo.svg" alt="logo">
+        </div>
+
+        <!-- Indicador de scroll -->
+        <div class="scroll-indicator">
+            <p>( navega con las flechas o el scroll )</p>
+            <span class="hint-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor">
+                    <path d="M15 19l-7-7 7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </span>
+        </div>
+    </div>
+    <!-- scripts -->
+<script>
+(() => {
+  /* =========================
+   * 1) CHISPAS / PARTÍCULAS
+   * ========================= */
+  function createParticles() {
+    const particlesContainer = document.getElementById('particles');
+    if (!particlesContainer) return;
+    const particleCount = 40;
+    for (let i = 0; i < particleCount; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.bottom = '-10px';
+      p.style.animationDuration = (Math.random() * 4 + 3) + 's';
+      p.style.animationDelay = Math.random() * 2 + 's';
+      p.style.setProperty('--random-x-1', ((Math.random()-0.5)*100) + 'px');
+      p.style.setProperty('--random-x-2', ((Math.random()-0.5)*150) + 'px');
+      p.style.setProperty('--random-x-3', ((Math.random()-0.5)*200) + 'px');
+      p.style.setProperty('--random-x-4', ((Math.random()-0.5)*100) + 'px');
+      const colors = ['#FFD700', '#FFA500', '#FF6347', '#FFFF00'];
+      p.style.background = colors[Math.floor(Math.random() * colors.length)];
+      particlesContainer.appendChild(p);
+    }
+  }
+  function addNewParticle() {
+    const c = document.getElementById('particles');
+    if (!c) return;
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.bottom = '-10px';
+    p.style.animationDuration = (Math.random() * 4 + 3) + 's';
+    p.style.setProperty('--random-x-1', ((Math.random()-0.5)*100) + 'px');
+    p.style.setProperty('--random-x-2', ((Math.random()-0.5)*150) + 'px');
+    p.style.setProperty('--random-x-3', ((Math.random()-0.5)*200) + 'px');
+    p.style.setProperty('--random-x-4', ((Math.random()-0.5)*100) + 'px');
+    const colors = ['#FFD700', '#FFA500', '#FF6347', '#FFFF00'];
+    p.style.background = colors[Math.floor(Math.random() * colors.length)];
+    c.appendChild(p);
+    setTimeout(() => { p.remove(); }, 7000);
+  }
+  createParticles();
+  setInterval(addNewParticle, 200);
+
+  /* =========================
+   * 2) TITLE ANIMATION
+   * ========================= */
+  function createAnimatedTitle() {
+    const titleEl = document.getElementById('animatedTitle');
+    if (!titleEl) return;
+
+    // asegurar caja contenedora
+    titleEl.style.position = 'relative';
+    titleEl.style.display = 'inline-block';
+
+    const cs   = getComputedStyle(titleEl);
+    const text = (titleEl.dataset.text || titleEl.textContent);
+    titleEl.dataset.text = text; // lo guardo
+    titleEl.innerHTML = '';
+
+    let currentX = 0;
+    const letterSpacing = parseFloat(cs.letterSpacing) || 0;
+
+    for (const ch of text) {
+      const span = document.createElement('span');
+      span.className = 'letter';
+
+      if (ch === ' ') {
+        span.classList.add('space');
+        span.innerHTML = '&nbsp;';
+        currentX += 0.5 * parseFloat(cs.fontSize); // ancho del espacio aprox.
+      } else {
+        // medir ancho de la letra con la misma fuente
+        const m = document.createElement('span');
+        m.style.visibility = 'hidden';
+        m.style.position = 'absolute';
+        m.style.font = `${cs.fontStyle} ${cs.fontVariant} ${cs.fontWeight} ${cs.fontSize}/${cs.lineHeight} ${cs.fontFamily}`;
+        m.textContent = ch;
+        titleEl.appendChild(m);
+        const w = m.offsetWidth;
+        m.remove();
+
+        span.textContent = ch;
+        span.style.left = currentX + 'px';
+        span.style.top  = '0px';
+        span.style.setProperty('--random-fall-x', ((Math.random()-0.5) * 400) + 'px');
+        currentX += w + letterSpacing;
+      }
+
+      // rotaciones aleatorias
+      span.style.setProperty('--rotation-start', ((Math.random()-0.5)*720) + 'deg');
+      span.style.setProperty('--rotation-mid',   ((Math.random()-0.5)*180) + 'deg');
+      span.style.setProperty('--rotation-end',   ((Math.random()-0.5)* 90) + 'deg');
+
+      titleEl.appendChild(span);
+    }
+  }
+
+  function animateTitle() {
+    const letters = document.querySelectorAll('#animatedTitle .letter');
+    letters.forEach((letter, index) => {
+      letter.style.animation = 'none';
+      letter.offsetHeight; // reflow
+      const duration = 1.2 + Math.random() * 0.8;
+      const delay    = index * 0.08 + Math.random() * 0.12;
+      letter.style.animation = `letterFall ${duration}s ease-out ${delay}s forwards`;
+    });
+  }
+
+  function startTitle(){
+    const titleEl = document.getElementById('animatedTitle');
+    if (!titleEl) return;
+    // reset y reconstrucción
+    titleEl.textContent = titleEl.dataset.text || titleEl.textContent;
+    createAnimatedTitle();
+    requestAnimationFrame(animateTitle);
+    requestAnimationFrame(() => {
+  animateTitle();
+  watchTitleEndAndShowSubtitle();
+});
+  }
+
+  // Espera a que termine la anim del título y muestra el subtítulo con fade-in
+function watchTitleEndAndShowSubtitle() {
+  const subtitle = document.querySelector('.subtitle-yacasi');
+  if (!subtitle) return;
+
+  // oculto por si venís de otra vuelta
+  subtitle.classList.remove('show');
+
+  const letters = document.querySelectorAll('#animatedTitle .letter');
+  if (!letters.length) { 
+    // por si algo falla, lo muestro igual
+    subtitle.classList.add('show'); 
+    return; 
+  }
+
+  let remaining = letters.length;
+  const onEnd = (e) => {
+    if (e.animationName !== 'letterFall') return; // solo contamos la anim del título
+    remaining--;
+    if (remaining === 0) {
+      subtitle.classList.add('show'); // dispara el fade-in del párrafo
+    }
+  };
+  letters.forEach(l => l.addEventListener('animationend', onEnd, { once: true }));
+}
+
+  /* =========================
+   * 3) SECCIONES + HOOKS
+   * ========================= */
+  const sections = Array.from(document.querySelectorAll('.content-section'));
+  let currentSection = sections.findIndex(s => s.classList.contains('active'));
+  if (currentSection < 0) {
+    sections[0]?.classList.add('active');
+    currentSection = 0;
+  }
+
+  // identifica secciones especiales ANTES de usarlas
+  const titleSection = document.getElementById('section1') || sections[0] || null;
+
+  // ===== PROXIMAMENTE (section3) =====
+  const proxSection   = sections.find(s => s.querySelector('.proximamente-container')) || null;
+  const proxSubtitle  = proxSection ? proxSection.querySelector('.subtitle-proximamente') : null;
+  const proxVideoWrap = proxSection ? proxSection.querySelector('.video-container') : null;
+  const proxVideo     = proxSection ? proxSection.querySelector('video') : null;
+  const proxLastText  = proxSection ? proxSection.querySelector('.proximamente-text.text-1') : null;
+
+  function ensureAutoplay(videoEl){
+    if (!videoEl) return;
+    videoEl.muted = true;  videoEl.setAttribute('muted','');
+    videoEl.playsInline = true; videoEl.setAttribute('playsinline','');
+    const tryPlay = () => videoEl.play?.().catch(()=>{});
+    tryPlay();
+    const unlock = () => { tryPlay(); cleanup(); };
+    const events = ['click','touchstart','keydown','wheel'];
+    function cleanup(){ events.forEach(ev => window.removeEventListener(ev, unlock)); }
+    events.forEach(ev => window.addEventListener(ev, unlock, { once:true, passive:true }));
+  }
+  function forceReflow(el){ if (el) void el.offsetWidth; }
+
+  let endAttached = false;
+  function onTextAnimationEnd(e){
+    if (!e || !e.target || !e.target.classList || !e.target.classList.contains('text-1')) return;
+    if (proxVideoWrap) proxVideoWrap.classList.add('show-video');
+    if (proxVideo) {
+      try { proxVideo.currentTime = 0; } catch {}
+      ensureAutoplay(proxVideo);
+    }
+  }
+  function attachTextEnd(){
+    if (proxLastText && !endAttached) {
+      proxLastText.addEventListener('animationend', onTextAnimationEnd);
+      endAttached = true;
+    }
+  }
+  function detachTextEnd(){
+    if (proxLastText && endAttached) {
+      proxLastText.removeEventListener('animationend', onTextAnimationEnd);
+      endAttached = false;
+    }
+  }
+  function startProximamente(){
+    if (!proxSection) return;
+    proxSection.classList.remove('animate');
+    if (proxSubtitle) proxSubtitle.classList.remove('animate');
+    if (proxVideoWrap) proxVideoWrap.classList.remove('show-video');
+    detachTextEnd();
+    if (proxVideo){ try { proxVideo.pause(); proxVideo.currentTime = 0; } catch {} }
+    forceReflow(proxSection); forceReflow(proxSubtitle); forceReflow(proxVideoWrap);
+    proxSection.classList.add('animate');
+    if (proxSubtitle) proxSubtitle.classList.add('animate');
+    attachTextEnd();
+  }
+  function resetProximamente(hard = true){
+    if (!proxSection) return;
+    proxSection.classList.remove('animate');
+    if (proxSubtitle)  proxSubtitle.classList.remove('animate');
+    if (hard && proxVideoWrap) proxVideoWrap.classList.remove('show-video');
+    if (proxVideo){ try { if (!proxVideo.paused) proxVideo.pause(); proxVideo.currentTime = 0; } catch {} }
+    detachTextEnd();
+    forceReflow(proxSection); forceReflow(proxSubtitle); forceReflow(proxVideoWrap);
+  }
+
+  // ===== SPAM (section2) =====
+  const spamSection = document.getElementById('section2') || sections.find(s => s.querySelector('.spam-grid')) || null;
+  let spamTimer = null;
+  let spamIdx = 0;
+
+  function startSpam(){
+    if (!spamSection) return;
+
+    const v = spamSection.querySelector('.spam-video') || spamSection.querySelector('video');
+    if (v){ try { v.currentTime = 0; } catch{} ensureAutoplay(v); }
+
+    const msgs = Array.from(spamSection.querySelectorAll('.spam-rotator .msg'));
+    if (msgs.length){
+      msgs.forEach(m => m.classList.remove('show'));
+      spamIdx = 0;
+      msgs[0].classList.add('show');
+
+      clearInterval(spamTimer);
+      spamTimer = setInterval(() => {
+        const prev = spamIdx;
+        spamIdx = (spamIdx + 1) % msgs.length;
+        msgs[prev].classList.remove('show');
+        msgs[spamIdx].classList.add('show');
+      }, 2400);
+    }
+  }
+  function resetSpam(){
+    clearInterval(spamTimer);
+    spamTimer = null;
+    const msgs = spamSection ? spamSection.querySelectorAll('.spam-rotator .msg') : [];
+    msgs.forEach(m => m.classList.remove('show'));
+    const v = spamSection ? (spamSection.querySelector('.spam-video') || spamSection.querySelector('video')) : null;
+    if (v){ try { v.pause(); v.currentTime = 0; } catch{} }
+  }
+
+  // ===== NAVEGACIÓN (una sola función showSection) =====
+  function showSection(index) {
+    if (index === currentSection || index < 0 || index >= sections.length) return;
+
+    const leaving  = sections[currentSection];
+    const entering = sections[index];
+
+    // hooks al salir
+    if (leaving === proxSection) resetProximamente(true);
+    if (leaving === spamSection) resetSpam();
+
+    sections.forEach((sec, i) => {
+      const isActive = i === index;
+      sec.classList.toggle('active', isActive);
+      sec.toggleAttribute('inert', !isActive);
+      sec.setAttribute('aria-hidden', String(!isActive));
+    });
+
+    currentSection = index;
+
+    // hooks al entrar
+    requestAnimationFrame(() => {
+      if (entering === titleSection) startTitle();
+      if (entering === proxSection)  startProximamente();
+      if (entering === spamSection)  startSpam();
+    });
+  }
+
+  // Estado inicial: disparar hooks de la activa
+  requestAnimationFrame(() => {
+    const active = sections[currentSection];
+    if (active === titleSection) startTitle();
+    if (active === proxSection)  startProximamente();
+    if (active === spamSection)  startSpam();
+  });
+
+  // Scroll rueda
+  window.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    if (e.deltaY > 0 && currentSection < sections.length - 1) {
+      showSection(currentSection + 1);
+    } else if (e.deltaY < 0 && currentSection > 0) {
+      showSection(currentSection - 1);
+    }
+  }, { passive: false });
+
+  // Flechas teclado
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown' && currentSection < sections.length - 1) {
+      showSection(currentSection + 1);
+    } else if (e.key === 'ArrowUp' && currentSection > 0) {
+      showSection(currentSection - 1);
+    }
+  });
+
+  // Debug clicks badges (sigue igual)
+  document.querySelectorAll('.store-badge').forEach(a=>{
+    a.addEventListener('click', e => console.log('click en', e.currentTarget, 'href=', a.href));
+  });
+})();
+</script>
+
+</body>
+</html>

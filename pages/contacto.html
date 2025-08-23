@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aldia.ai - El Newsletter</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="../asstes/img/icono.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Fondo animado -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <div class="gradient-orb orb-4"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="../index.html" class="contenedor-logo"><img class="logo-header" src="../asstes/img/logo.svg" alt="logo"></a>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="#" class="nav-link">info</a>
+                <a href="../pages/precios.html" class="nav-link">Precios</a>
+                <a href="../pages/contacto.html" class="nav-link">Contacto</a>
+            </div>
+            <div class="nav-actions">
+                <a href="../pages/precios.html" class="btn-primary">Suscribirse</a>
+                <a href="#" class="btn-secondary">Demo Free</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+
+    <section class="contact-section">
+            <div class="contact-wrap">
+        <div class="contact-card" id="contact-card">
+          <h1 class="contact-title">Hablemos</h1>
+          <p class="contact-sub">Escribinos y te respondemos en menos de 24 h. Sin vueltas, con valor.</p>
+
+          <form id="contact-form" class="contact-form" action="#" method="post" novalidate>
+            <div class="field">
+              <label for="c-name" class="label">Nombre</label>
+              <input id="c-name" name="name" type="text" class="input" placeholder="Tu nombre" required>
+            </div>
+
+            <div class="field">
+              <label for="c-lastname" class="label">Apellido</label>
+              <input id="c-lastname" name="lastname" type="text" class="input" placeholder="Tu Apellido" required>
+            </div>
+
+
+            <div class="field">
+              <label for="c-email" class="label">Email</label>
+              <input id="c-email" name="email" type="email" class="input" placeholder="tunombre@correo.com" required autocomplete="email">
+            </div>
+
+
+<div class="field select-field">
+  <label for="c-topic" class="label">Motivo</label>
+  <select id="c-topic" name="topic" class="select" required>
+    <option value="" selected disabled hidden>Elegí una opción…</option>
+    <option value="consulta">Consulta general</option>
+    <option value="prensa">Prensa / Alianzas</option>
+    <option value="soporte">Soporte</option>
+  </select>
+</div>
+
+
+            <div class="field full">
+              <label for="c-msg" class="label">Mensaje</label>
+              <textarea id="c-msg" name="message" class="textarea" placeholder="Contanos en 2–3 líneas…" required></textarea>
+            </div>
+
+            <!-- honeypot anti-bots -->
+            <div class="sr-only" aria-hidden="true">
+              <label>Dejar vacío</label>
+              <input type="text" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="full form-row-actions">
+              <button type="submit" class="btn-primary btn-send" id="c-submit">
+                Enviar
+                <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+              <span class="form-hint">Aun necesitas <a href="#">Ayuda?</a></span>
+            </div>
+
+            <div id="c-feedback" class="form-ok" style="display:none;"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+<!-- Modal Demo Free -->
+<div id="demo-modal" class="modal-root" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="demo-title">
+    <button class="modal-close" aria-label="Cerrar" data-close>✕</button>
+
+    <header class="modal-head">
+      <h3 id="demo-title">Queres probar la Demo?</h3>
+      <p>Dejanos tu email y te mandamos una edición de prueba.</p>
+    </header>
+
+    <!-- Reusa las clases del footer para mantener el estilo -->
+    <form id="modal-subscribe-form" class="subscribe-form" action="#" method="post" novalidate>
+      <label for="modal-email" class="sr-only">Tu email</label>
+      <div class="subscribe-row">
+        <input
+          id="modal-email"
+          name="email"
+          type="email"
+          class="subscribe-input"
+          placeholder="tunombre@correo.com"
+          required
+          autocomplete="email"
+        />
+        <button type="submit" class="btn-subscribe">
+          Suscribirme
+          <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+      <small class="subscribe-hint">Sin spam. Podés darte de baja cuando quieras.</small>
+      <div class="subscribe-feedback" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+    </main>
+
+    <!-- Footer -->
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <!-- Columna marca -->
+        <div class="footer-brand">
+          <a href="../index.html"><img class="logo-footer" src="../asstes/img/logo.svg" alt="logo"></a>
+          <p>El Newsletter más apasionado y completo de IA. Hecho en 🇦🇷 para el mundo. IA con criterio, no con humo.</p>
+        </div>
+
+      <!-- Columna links -->
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Producto</h4>
+          <a href="../index.html#features">Características</a>
+          <a href="../pages/precios.html">Precios</a>
+          <a href="../pages/info.html">Info</a>
+        </div>
+        <div class="footer-column">
+          <h4>Soporte</h4>
+          <a href="#">Centro de Ayuda</a>
+          <a href="#">Contacto</a>
+          <a href="#">Estado</a>
+        </div>
+      </div>
+
+      <!-- Columna suscripción -->
+      <div class="footer-subscribe">
+        <h4>Suscribite</h4>
+        <p class="subscribe-copy">Lo esencial de IA en <strong>5′</strong>, 3 veces por semana.</p>
+
+        <form id="footer-subscribe-form" class="subscribe-form" action="#" method="post" novalidate>
+          <label for="footer-email" class="sr-only">Tu email</label>
+          <div class="subscribe-row">
+            <input
+              id="footer-email"
+              name="email"
+              type="email"
+              class="subscribe-input"
+              placeholder="tunombre@correo.com"
+              required
+              autocomplete="email"
+            />
+            <button type="submit" class="btn-subscribe">
+              Suscribirme
+              <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+          <small class="subscribe-hint">Sin spam. Podés darte de baja cuando quieras.</small>
+          <div class="subscribe-feedback" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+      <div class="footer-bottom">
+  <p>© <span id="current-year"></span> · Todos los derechos reservados — Leandro Bellone.</p>
+</div>
+</footer>
+
+
+<script src="../js/script.js"></script>
+<script src="../js/modal.js"></script>
+<script src="../js/footer-form.js"></script>
+<script src="../js/formulario-contacto.js"></script>
+</body>
+</html>
